@@ -51,7 +51,7 @@ Create the data_bag:
 Create a deployer:
 
 ```json
-# data_bags/deployers/svargo.json
+// data_bags/deployers/svargo.json
 {
   "id": "svargo",
   "deploy": [
