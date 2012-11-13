@@ -56,7 +56,14 @@ end
 
 # SEL users and deployers that can deploy to this node
 query = "deploy:any OR deploy:#{node['fqdn']} OR deploy:#{node['ipaddress']}"
-users = search(:users, query) + search(:deployers, query)
+users = [:users, :deployers].collect do |data_bag|
+  # Because the data_bag may not exist, wrap in a safe search
+  begin
+    search(data_bag, query)
+  rescue Net::HTTPServerException
+    []
+  end
+end.flatten
 
 # TMPL /home/deploy/.ssh/authorized_keys
 template "#{node['deployer']['home']}/.ssh/authorized_keys" do
