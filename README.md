@@ -61,7 +61,7 @@ Create a deployer:
 }
 ```
 
-The same options apply to the `servers` key as above. **Note: this will not actually create system user accounts.**
+The same options apply to the `deploy` key as above. **Note: this will not actually create system user accounts.**
 
 Usage
 -----
