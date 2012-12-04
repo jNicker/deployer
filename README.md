@@ -24,7 +24,8 @@ There are two ways to add keys to the `deployer`. If you're using the opscode `u
 {
   "id": "svargo",
   "uid": "1000",
-  "deploy": "any"
+  "deploy": "any",
+  ssh_keys: [...]
 }
 ```
 
@@ -38,7 +39,8 @@ or specify an array of servers or IP addresses that the user should be allowed t
   "deploy": [
     "1.2.3.4",
     "mynode.example.com"
-  ]
+  ],
+  ssh_keys: [...]
 }
 ```
 
@@ -57,7 +59,8 @@ Create a deployer:
   "deploy": [
     "1.2.3.4",
     "mynode.example.com"
-  ]
+  ],
+  ssh_keys: [...]
 }
 ```
 
