@@ -17,7 +17,7 @@ There are three attributes that you can override in your node:
 - `node['deployer']['home']` - the home directory for the deploy user (default: `/home/deploy`)
 
 ### Adding keys
-There are two ways to add keys to the `deployer`. If you're using the opscode `users` cookbook, `deployer` easily integrates with the existing `:users` data_bags. Simply add the `servers` key to an existing user:
+There are two ways to add keys to the `deployer`. If you're using the opscode `users` cookbook, `deployer` easily integrates with the existing `:users` data_bags. Simply add the `deploy` key to an existing user:
 
 ```json
 // data_bags/users/svargo.json
@@ -64,7 +64,7 @@ Create a deployer:
 }
 ```
 
-The same options apply to the `servers` key as above. **Note: this will not actually create system user accounts.**
+The same options apply to the `deploy` key as above. **Note: this will not actually create system user accounts.**
 
 Usage
 -----
